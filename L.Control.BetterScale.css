@@ -1,5 +1,5 @@
 .leaflet-control-better-scale {
-
+	height: 15px;
 }
 .leaflet-control-better-scale-upper-first-piece {
     top: 0%;
@@ -37,8 +37,7 @@
 }
 .leaflet-control-better-scale-label-div {
     position: relative;
-    width: 100%;
-    height: 5px;
+    width: 100%;   
 }
 .leaflet-control-better-scale-label {
     position: absolute;
