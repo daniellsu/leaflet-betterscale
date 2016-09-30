@@ -1,0 +1,60 @@
+.leaflet-control-better-scale {
+
+}
+.leaflet-control-better-scale-upper-first-piece {
+    top: 0%;
+    left: 0%;
+    width: 25%;
+}
+.leaflet-control-better-scale-upper-second-piece {
+    top: 0%;
+    left: 50%;
+    width: 25%;
+}
+.leaflet-control-better-scale-lower-first-piece {
+    top: 50%;
+    left: 25%;
+    width: 25%;
+}
+.leaflet-control-better-scale-lower-second-piece {
+    top: 50%;
+    left: 75%;
+    width: 30%;
+}
+.leaflet-control-better-scale-ruler-block {
+    overflow: hidden;
+    position: absolute;
+    height: 50%;
+    background-color: #444444;
+}
+.leaflet-control-better-scale-ruler {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 7px;
+    background-color: White;
+    border: 1px solid #444444;
+}
+.leaflet-control-better-scale-label-div {
+    position: relative;
+    width: 100%;
+    height: 5px;
+}
+.leaflet-control-better-scale-label {
+    position: absolute;
+    width: 10%;
+    text-align: center;
+    color: #fff;
+    font: sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    height: 5px;
+    top: -1px;
+     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+.leaflet-control-better-scale-first-number {
+    left: 45%;
+}
+.leaflet-control-better-scale-second-number {
+    left: 95%;
+}
