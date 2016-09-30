@@ -1,29 +1,30 @@
 <html>
 <head>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.0.0/dist/leaflet-src.js"></script>
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0/leaflet.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0/leaflet.js"></script>
+  <link rel="stylesheet" href="L.Control.BetterScale.css" />
+  <script src="L.Control.BetterScale.js"></script>
+
   
   <style>
-   #mapid { height: 100%; width: 100%; }
-      
+   #map { height: 500px; width: 700px; }      
    </style>
+   
+</head>
+<body>  
+<div id="map"></div>
    <script>
 	
-   var mymap = L.map('mapid').setView([30.182505,-93.318665], 12);
+   var map = L.map('map').setView([30.182505,-93.318665], 12);
         
 	L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {    
 		maxZoom: 18,
 		attribution:'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-	}).addTo(mymap);
+	}).addTo(map);
 
-	//L.control.betterscale().addTo(mymap);
+	L.control.betterscale().addTo(map);
 	
 </script>
-   
-</head>
-<body>
-  
-<div id="mapid"></div>
+
 </body>
 </html>
