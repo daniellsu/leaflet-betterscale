@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.0.0/dist/leaflet-src.js"></script>
+  <link rel="stylesheet" href="L.Control.BetterScale.css" />
+  <script src="L.Control.BetterScale.js" />
+  
+  <style>
+   #mapid { height: 500px; }
+   </style>
+  
+   <script>
+   var mymap = L.map('mapid').setView([30.182505,-93.318665], 12);
+        
+L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {    
+    maxZoom: 18,
+    attribution:'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(mymap);
+
+L.control.betterscale().addTo(mymap);
+</script>
+</head>
+<body>
+<div id="mapid"></div>
+</body>
+</html>
