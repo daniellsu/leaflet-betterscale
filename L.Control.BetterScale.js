@@ -34,9 +34,17 @@ L.Control.BetterScale = L.Control.extend({
     _updateScales: function (t, e) {
         t.metric && e && this._updateMetric(e), t.imperial && e && this._updateImperial(e)
     },
-    _updateMetric: function (t) {
+    _updateMetric_old: function (t) {
         var e = this._getRoundNum(t);
-        this._mScale.style.width = this._getScaleWidth(e / t) + "px", this._mScale.innerHTML = 1e3 > e ? e + " m" : e / 1e3 + " km"
+        this._iScale.style.width = this._getScaleWidth(e / t) + "px", this._iScaleLabel.innerHTML = 1e3 > e ? e + " m" : e / 1e3 + " km"
+    },
+    _updateMetric: function (t) {
+        var e, i, n, o, s, a = t,
+            r = this._iScaleFirstNumber,
+            h = this._iScaleSecondNumber,
+            l = this._iScale,
+            u = this._iScaleLabel;
+        u.innerHTML = "0", a > 500 ? (e = a / 1000, i = this._getRoundNum(e), o = this._getRoundNum(e / 2), l.style.width = this._getScaleWidth(i / e) + "px", r.innerHTML = o, h.innerHTML = i + "km") : (n = this._getRoundNum(a), s = this._getRoundNum(a / 2), l.style.width = this._getScaleWidth(n / a) + "px", r.innerHTML = s, h.innerHTML = n + "m")
     },
     _updateImperial: function (t) {
         var e, i, n, o, s, a = 3.2808399 * t,
