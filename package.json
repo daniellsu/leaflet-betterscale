@@ -1,0 +1,8 @@
+{
+  "name": "leaflet-betterscale",
+  "version": "0.0.1",
+  "description": "Leaflet Betterscale control",
+  "main": "L.Control.BetterScale.js",
+  "style": "L.Control.BetterScale.css",
+  "repository": "https://github.com/daniellsu/leaflet-betterscale.git"
+}
